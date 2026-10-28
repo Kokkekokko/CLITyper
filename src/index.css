@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background-color: #08090c;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* CRT Scanline overlay */
+.crt-overlay {
+  position: relative;
+}
+.crt-overlay::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+/* Cyber Terminal Glow Themes */
+.theme-redhat {
+  --neon-accent: #EE0000;
+  --neon-border: rgba(238, 0, 0, 0.4);
+  --neon-glow: rgba(238, 0, 0, 0.2);
+  --panel-bg: rgba(14, 15, 20, 0.95);
+}
+
+.theme-matrix {
+  --neon-accent: #00FF66;
+  --neon-border: rgba(0, 255, 102, 0.4);
+  --neon-glow: rgba(0, 255, 102, 0.2);
+  --panel-bg: rgba(10, 18, 14, 0.95);
+}
+
+.theme-amber {
+  --neon-accent: #FFB000;
+  --neon-border: rgba(255, 176, 0, 0.4);
+  --neon-glow: rgba(255, 176, 0, 0.2);
+  --panel-bg: rgba(20, 17, 12, 0.95);
+}
+
+.theme-cyberpunk {
+  --neon-accent: #00E5FF;
+  --neon-border: rgba(0, 229, 255, 0.4);
+  --neon-glow: rgba(0, 229, 255, 0.2);
+  --panel-bg: rgba(10, 15, 25, 0.95);
+}
+
+/* Blinking terminal cursor */
+@keyframes cyber-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.animate-cyber-cursor {
+  animation: cyber-blink 0.9s infinite;
+}
+
+/* Custom scrollbar for cyber aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #272d3f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3c4661;
+}

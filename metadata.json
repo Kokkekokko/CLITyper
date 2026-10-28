@@ -1,0 +1,6 @@
+{
+  "name": "Red Hat CyberTyper // RHEL Terminal Speed Duel",
+  "description": "เว็บฝึกพิมพ์ดีดสไตล์ Super Hacker ด้วยคำสั่ง Red Hat Enterprise Linux (RHEL 9) พร้อมคำอธิบายคำสั่งเจาะลึก และโหมดประลองความเร็วกับเพื่อน",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
